@@ -1,0 +1,23 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/register">Register</a></li>
+        <li><a href="badges.html">A2</a></li>
+        <li><a href="collapsible.html">A3</a></li>
+      </ul>
+    </div>
+  </nav>
+{% if messages %}
+  {% for msg in messages %}
+    <script>M.toast({html: "{{msg}}", classes: 'blue rounded', displayLength:3000});</script>
+  {% endfor %}
+{% endif %}
+{% block content %}
+{% endblock %}
+</body>
